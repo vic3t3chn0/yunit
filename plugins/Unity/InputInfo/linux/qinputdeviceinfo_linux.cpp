@@ -175,9 +175,8 @@ QInputDevice *QInputDeviceManagerPrivate::addDevice(struct udev_device *udev)
     }
 
     for (int i = 0; i < EV_MAX; i++) {
-        if (i == EV_KEY || i == EV_SW || i == EV_REL
-                || i == EV_REL || i == EV_ABS) {
-            for (int j = 0; j <  libevdev_event_type_get_max(i); j++) {
+        if (i == EV_KEY || i == EV_SW || i == EV_REL || i == EV_ABS) {
+            for (int j = 0; j < libevdev_event_type_get_max(i); j++) {
                 if (libevdev_has_event_code(dev, i, j)) {
                     switch (i) {
                     case EV_KEY:
