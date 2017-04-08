@@ -4,4 +4,4 @@ This is a fork of Canonical's Unity 8 repository as of April 5, 2017. Following 
 
 Please check [unity8org's web site](http://www.unity8.org) (currently under construction) for project updates
  
-
+** See the file CODING for build and running instructions **

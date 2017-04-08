@@ -1,24 +1,19 @@
-Building Unity 8
-================
+Building unity8org
+==================
 
-Only Ubuntu 14.04 (trusty) is supported as a developement environment.
+Only Ubuntu 17.04 (zesty) is supported as a developement environment.
 
 download source
 ---------------
-- create a parent folder to not pollute your setup. so that you can have different unity
-  branches there (trunk, WIP etc)
+- $ cd ~
+- fetch unity8org
+  $ sudo apt-get install git
+  $ git clone https://github.com/unity8org/unity8org.git
+  $ cd ~/unity8org
 
-  $ mkdir ~/unity8
-
-- fetch Unity 8 source
-  $ sudo apt-get install bzr
-  $ bzr branch lp:unity8 ~/unity8/trunk
-  $ cd ~/unity8/trunk
-
-install dependencies and build Unity 8
---------------------
-
-$ cd ~/unity8/trunk
+install dependencies and build unity8org
+----------------------------------------
+$ sudo apt install devscripts equivs
 $ ./build.sh
 
   If its your first time, this will install the required dependencies to build and
@@ -31,15 +26,15 @@ You may also rebuild with the -c for clean, which just deletes the build
 directory.
 
 
-Running Unity 8 on your desktop
-===============================
+Running unity8org on your desktop
+=================================
 
-run the Unity 8 shell
----------------------
-$ cd ~/unity8/trunk
+run the unity8org shell
+-----------------------
+$ cd ~/unity8org
 $ cd builddir
 
-Each component of unity8 can be ran independently for development and testing
+Each component of unity8org can be ran independently for development and testing
 For example:
 $ make tryShell
 $ make tryLauncher
@@ -64,28 +59,28 @@ Notes
     - Populate the address book with sample data
 
 
-Running Unity 8 on devices
-==========================
+Running unity8org on devices
+============================
 
-Running unity8 on a device should be done using crossbuilder.
+Running unity8org on a device should be done using crossbuilder.
 Go to 
 * https://launchpad.net/crossbuilder and
 * https://wiki.ubuntu.com/Touch/Crossbuilder 
 for more details on crossbuilder.
 
-unity8 will automatically restart on the phone once deployment
+unity8org will automatically restart on the phone once deployment
 has finished due to post-build-steps set up in this repository.
 
 Coding guidelines
 =================
-The work-in-progress coding guidelines are available under:
-https://launchpad.net/canonical-client-development-guidelines
 
+TBD
 
 Development Environment
 =======================
+
 QtCreator (available via the Software Center) is the best IDE to hack on
-Unity 8.
+unity8org.
 
 If using VIM, make sure you install some syntax highlighting for QML, like
 https://github.com/peterhoeg/vim-qml
@@ -166,7 +161,7 @@ $ PYTHONPATH=../tests/autopilot autopilot3 run unity8
 Debugging techniques
 ====================
 
-Unity8 heavily uses Qt and with that Qt debugging techniques mostly apply in the
+unity8org heavily uses Qt and with that Qt debugging techniques mostly apply in the
 same fashion. There are, however, some additional unity8-specific notes:
 
 * Enable/disable Qt scenegraph visualizer on the fly:
