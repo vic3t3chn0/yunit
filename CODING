@@ -13,7 +13,7 @@ download source
 
 install dependencies and build unity8org
 ----------------------------------------
-$ sudo apt install devscripts equivs
+$ sudo apt install devscripts equivs cmake
 $ ./build.sh
 
   If its your first time, this will install the required dependencies to build and
