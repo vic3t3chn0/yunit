@@ -54,7 +54,7 @@ bool Greeter::hasGuestAccountHint() const
 
 QString Greeter::getHint(const QString &name) const
 {
-    Q_UNUSED(name)
+    Q_UNUSED(name);
     return QLatin1String("");
 }
 
@@ -141,8 +141,8 @@ void Greeter::authenticateAutologin()
 
 void Greeter::authenticateRemote(const QString &session, const QString &username)
 {
-    Q_UNUSED(session)
-    Q_UNUSED(username)
+    Q_UNUSED(session);
+    Q_UNUSED(username);
 }
 
 void Greeter::cancelAuthentication()
@@ -153,12 +153,12 @@ void Greeter::cancelAuthentication()
 
 void Greeter::setLanguage (const QString &language)
 {
-    Q_UNUSED(language)
+    Q_UNUSED(language);
 }
 
 bool Greeter::startSessionSync(const QString &session)
 {
-    Q_UNUSED(session)
+    Q_UNUSED(session);
     return true;
 }
 
